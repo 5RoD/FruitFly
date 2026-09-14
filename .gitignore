@@ -13,7 +13,7 @@ __pycache__/
 logs/
 run*/
 server/
-config/
+/config/
 world*/
 recordings/
 voicechat/
