@@ -1,0 +1,36 @@
+repositories { maven { url = 'https://maven.maxhenkel.de/repository/public' } }
+dependencies {
+    compileOnly 'de.maxhenkel.voicechat:voicechat-api:2.6.20'
+    clientCompileOnly 'de.maxhenkel.voicechat:voicechat-api:2.6.20'
+}
+// Simple Voice Chat runtime is optional and is never included in the release jar.
+// For manual integration only: install voicechat-fabric-1.21.1-2.6.22 separately.
+tasks.register('voiceCheck', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.flybrain.voice.VoiceCheck'
+    enableAssertions = true
+}
+check.dependsOn voiceCheck
+tasks.register('voiceCacheCheck', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.flybrain.voice.VoiceCacheCheck'
+    enableAssertions = true
+}
+check.dependsOn voiceCacheCheck
+dependencies { testImplementation 'de.maxhenkel.voicechat:voicechat-api:2.6.20' }
+tasks.register('voicePluginCheck', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.flybrain.voice.VoicePluginCheck'
+    enableAssertions = true
+}
+check.dependsOn voicePluginCheck
+tasks.register('voiceConsentCheck', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.flybrain.voice.VoiceConsentCheck'
+    enableAssertions = true
+}
+check.dependsOn voiceConsentCheck

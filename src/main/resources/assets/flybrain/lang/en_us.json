@@ -1,0 +1,18 @@
+{
+  "entity.flybrain.creature": "Creature",
+  "subtitles.flybrain.idle": "Insect clicks",
+  "subtitles.flybrain.walk": "Tiny feet tap",
+  "subtitles.flybrain.run": "Feet skitter",
+  "subtitles.flybrain.groom": "Forelegs rub",
+  "subtitles.flybrain.takeoff": "Wings engage",
+  "subtitles.flybrain.air": "Wings buzz",
+  "subtitles.flybrain.land": "Insect lands",
+  "subtitles.flybrain.strike": "Chitin snaps",
+  "subtitles.flybrain.feeding": "Creature feeds",
+  "subtitles.flybrain.hurt": "Creature recoils",
+  "subtitles.flybrain.death": "Chitin settles",
+  "subtitles.flybrain.crawl": "Claws scrape",
+  "subtitles.flybrain.scare": "Creature rasps",
+  "block.flybrain.scene_marker": "Scene Marker",
+  "item.flybrain.scene_marker": "Scene Marker"
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "flybrain",
+  "version": "${version}",
+  "name": "FlyBrain Prototype",
+  "description": "Hybrid horror predator with real FlyWire neural modulation, recording markers and optional opt-in voice mimicry.",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.flybrain.FlyBrain"
+    ],
+    "client": [
+      "dev.flybrain.render.FlyBrainClient"
+    ],
+    "voicechat": [
+      "dev.flybrain.voice.VoicePlugin"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "voicechat": "1.21.1-2.6.22"
+  }
+}

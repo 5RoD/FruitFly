@@ -1,0 +1,70 @@
+plugins { id 'fabric-loom' version '1.10.5' }
+
+version = '0.3.0'
+group = 'dev.flybrain'
+
+repositories { mavenCentral() }
+dependencies {
+    minecraft 'com.mojang:minecraft:1.21.1'
+    mappings 'net.fabricmc:yarn:1.21.1+build.3:v2'
+    modImplementation 'net.fabricmc:fabric-loader:0.19.5'
+    modImplementation 'net.fabricmc.fabric-api:fabric-api:0.116.17+1.21.1'
+}
+loom {
+    splitEnvironmentSourceSets()
+    mods { flybrain { sourceSet sourceSets.main; sourceSet sourceSets.client } }
+    runs { server { runDir 'run-server'; programArg 'nogui' } }
+}
+tasks.named('runServer') { standardInput = System.in }
+java { toolchain.languageVersion = JavaLanguageVersion.of(21); withSourcesJar() }
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+tasks.withType(Jar).configureEach { from('LICENSE', 'THIRD_PARTY_NOTICES.md') }
+tasks.withType(JavaCompile).configureEach { options.release = 21 }
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') { expand version: project.version }
+}
+tasks.register('brainCheck', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.flybrain.PrototypeCheck'
+    enableAssertions = true
+    if (project.hasProperty('gaitModel')) args '--gait-model', project.property('gaitModel')
+}
+check.dependsOn brainCheck
+apply from: 'tools/voicechat.gradle'
+
+['predatorCheck': 'dev.flybrain.PredatorCheck',
+ 'telemetryCheck': 'dev.flybrain.PredatorTelemetryCheck',
+ 'recoveryCheck': 'dev.flybrain.brain.RecoveryCheck',
+ 'audioCheck': 'dev.flybrain.AudioCheck',
+ 'surfaceCheck': 'dev.flybrain.SurfaceCheck'].each { taskName, entry ->
+    tasks.register(taskName, JavaExec) {
+        dependsOn testClasses
+        classpath = sourceSets.test.runtimeClasspath
+        mainClass = entry
+        enableAssertions = true
+    }
+    check.dependsOn taskName
+}
+
+// Opt-in Minecraft integration fixture; its classes never enter the release JAR.
+if (project.hasProperty('animationSmoke')) apply from: 'tools/animation-smoke.gradle'
+if (project.hasProperty('predatorSmoke')) apply from: 'tools/predator-smoke.gradle'
+if (project.hasProperty('predatorCoverage')) apply from: 'tools/predator-coverage.gradle'
+tasks.register('animationReel', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.flybrain.AnimationReel'
+    enableAssertions = true
+}
+tasks.register('realBrainCheck', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.flybrain.PrototypeCheck'
+    args '--real'
+    enableAssertions = true
+}

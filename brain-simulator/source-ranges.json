@@ -1,0 +1,157 @@
+[
+  {
+    "offset": 100739106,
+    "size": 65536,
+    "sha256": "939cf04affb1c5b803bfac6a9d7bc603b3441b1819ffb2e5a6e7ed3360145dfb"
+  },
+  {
+    "offset": 4,
+    "size": 2740815,
+    "sha256": "d53cd51d44ff7517e4b0c534d925a0c44bc9d4ad1d8e8ed2c2f3553fc0b2bc7f"
+  },
+  {
+    "offset": 5870036,
+    "size": 565408,
+    "sha256": "2404f415dce2de2e23c648b3584b12377a17c201c161ff7164f2930bb8feb335"
+  },
+  {
+    "offset": 6996116,
+    "size": 2738654,
+    "sha256": "5f7ce20b0ea3f024e6df6c90bf637720c0a1df816a1b5cbcf67e324191f7a25e"
+  },
+  {
+    "offset": 12862072,
+    "size": 570937,
+    "sha256": "beba476a65519fa6ac5b698de8da1596c63f5f16b0b2b26f94c26f221f901c3b"
+  },
+  {
+    "offset": 14023106,
+    "size": 2743181,
+    "sha256": "a8cb75806dc8f80efb9c35344d4c2b0a8c043713e22f95f4201eafae61b74acc"
+  },
+  {
+    "offset": 19894458,
+    "size": 572847,
+    "sha256": "abaf5581e9ba46783e4cc5583afbebff6579d60df181edc91fb9ff98293b8064"
+  },
+  {
+    "offset": 20975707,
+    "size": 2741491,
+    "sha256": "d3dc0e0c925e41eedafb368b29c12e6440d88c7053c21dfa84f04ce7a1a9fa3f"
+  },
+  {
+    "offset": 26850763,
+    "size": 573919,
+    "sha256": "c15b53e44724f863c7761f102fb550cc2c4336b394f3976bbb2c1f4967a24782"
+  },
+  {
+    "offset": 27906312,
+    "size": 2735788,
+    "sha256": "d0d9b3b31573ef5fa06d73009916b2522b053ef47bca33f4a902bac5d0cb9497"
+  },
+  {
+    "offset": 33776845,
+    "size": 577896,
+    "sha256": "0dd8537bc357d177c733b9bc14f593405222ec16a7882bb75c18717e23e6f871"
+  },
+  {
+    "offset": 34816860,
+    "size": 2744133,
+    "sha256": "4a13cf1fa7d3bd9e2173c64a49e112e58a2c6d3eb53ef067e4c6eb56d28911b7"
+  },
+  {
+    "offset": 40693813,
+    "size": 576770,
+    "sha256": "e60dd7868abf06e4c1bfc6fecae4b8fac02e80374f8c002ae63ff99e82f2b974"
+  },
+  {
+    "offset": 41806853,
+    "size": 2744831,
+    "sha256": "79828f9d0fef35e9f36f67b437ecb8a0dead30347f668800e7f21dcf6487fc9b"
+  },
+  {
+    "offset": 47686626,
+    "size": 568573,
+    "sha256": "0d761be755e9ecfeb0a85b5ea354900cb8fe61de31376f9149657ddd039b0812"
+  },
+  {
+    "offset": 48820520,
+    "size": 2742662,
+    "sha256": "8dbc064a127df629c5687bebd2530272ff50d570a9dcdc6df77c7eba8bd75303"
+  },
+  {
+    "offset": 54694988,
+    "size": 574565,
+    "sha256": "b7950803e02f7968e040fc06c9396e0656acd56e6f6c7df39b6da0a9c115fc9d"
+  },
+  {
+    "offset": 55824485,
+    "size": 2741423,
+    "sha256": "0d937622368c382ea0e187cecb13e15f259d612d1f453c0400df41ddd9fbae7a"
+  },
+  {
+    "offset": 61695853,
+    "size": 577326,
+    "sha256": "1d67ac13826e6dd108095b68871690439e201b9939d5b542c44820f66fa438e6"
+  },
+  {
+    "offset": 62857254,
+    "size": 2741268,
+    "sha256": "4d0e5b253b6ab6ecd3bc8ec3be404b043d0196e3e8e7da8287d135a4cee814d1"
+  },
+  {
+    "offset": 68728511,
+    "size": 569751,
+    "sha256": "e7dc9bff53678bb592b7afd609900fdea080dec730532a5b6cab5e65acdbb14d"
+  },
+  {
+    "offset": 69816480,
+    "size": 2740866,
+    "sha256": "2135e4bfd5f79c38072e3135031b60e230fd98de215d0607030c73283554c90f"
+  },
+  {
+    "offset": 75685112,
+    "size": 567767,
+    "sha256": "a26b15c2717e2eece0fc4b0c7a4dcb88ed9fc9bbbc74dfbd430ff6005e967ef3"
+  },
+  {
+    "offset": 76758271,
+    "size": 2746419,
+    "sha256": "2befb874a00bc406bc383e088b52f5564ba68b9d7d677ba153e8eff471a1a356"
+  },
+  {
+    "offset": 82638901,
+    "size": 564822,
+    "sha256": "802286a8569e7e2552d07ea9a6fd9637dae69a3d230e5dfcc58feab063b92594"
+  },
+  {
+    "offset": 83691834,
+    "size": 2742122,
+    "sha256": "e163cd354c5e4d48c8acf767790e22873cb7ac8e977eb2f882ef16f4a2cf3354"
+  },
+  {
+    "offset": 89562823,
+    "size": 567723,
+    "sha256": "39307959e409eb467305f5f589c4efe243c7e94f469e06ac9ffd6919616f079c"
+  },
+  {
+    "offset": 90687597,
+    "size": 2745965,
+    "sha256": "ef4399cfa38748dc12d1a0999ece73fc3dad52acb83670388d82543cd195c614"
+  },
+  {
+    "offset": 96563687,
+    "size": 573211,
+    "sha256": "c9f1d05b8931b6668cc3c3b7dcc83161b2d9e3a823a9acd759bc2a6340f545ff"
+  },
+  {
+    "offset": 97648539,
+    "size": 1284867,
+    "sha256": "9a6c278f0fc21794512a97a3572ae21e2f75658510f287b3168f21fdb13ecb31"
+  },
+  {
+    "offset": 100275112,
+    "size": 229613,
+    "sha256": "b7db67b6bc992f71ead0dd5425027725017b0a1f3c1097943a1ec3f81b0abb80"
+  }
+]

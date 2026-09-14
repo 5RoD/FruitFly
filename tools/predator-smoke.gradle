@@ -1,0 +1,19 @@
+sourceSets {
+    predatorTest {
+        compileClasspath += sourceSets.client.compileClasspath + sourceSets.client.output + sourceSets.main.output
+        runtimeClasspath += sourceSets.client.runtimeClasspath
+    }
+}
+loom {
+    mods { predator_smoke { sourceSet sourceSets.predatorTest } }
+    runs {
+        predatorServer { server(); source sourceSets.predatorTest; runDir 'docs/predator/server'; programArg 'nogui' }
+        predatorClientTwo { client(); source sourceSets.predatorTest; runDir 'docs/predator/client-two'; programArgs '--quickPlayMultiplayer','127.0.0.1:25577','--username','GuestQA','--width','960','--height','540' }
+        predatorClient { client(); source sourceSets.predatorTest; runDir 'docs/predator/client'; programArgs '--quickPlayMultiplayer','127.0.0.1:25577','--username','PredatorQA','--width','1280','--height','720' }
+    }
+}
+tasks.named('compilePredatorTestJava') { dependsOn clientClasses }
+tasks.named('runPredatorServer') { dependsOn predatorTestClasses; standardInput = System.in }
+tasks.named('runPredatorClient') { dependsOn predatorTestClasses }
+
+tasks.named('runPredatorClientTwo') { dependsOn predatorTestClasses }

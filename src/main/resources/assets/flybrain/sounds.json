@@ -1,0 +1,119 @@
+{
+  "idle": {
+    "subtitle": "subtitles.flybrain.idle",
+    "sounds": [
+      {
+        "name": "flybrain:idle",
+        "stream": false
+      }
+    ]
+  },
+  "walk": {
+    "subtitle": "subtitles.flybrain.walk",
+    "sounds": [
+      {
+        "name": "flybrain:walk",
+        "stream": false
+      }
+    ]
+  },
+  "run": {
+    "subtitle": "subtitles.flybrain.run",
+    "sounds": [
+      {
+        "name": "flybrain:run",
+        "stream": false
+      }
+    ]
+  },
+  "groom": {
+    "subtitle": "subtitles.flybrain.groom",
+    "sounds": [
+      {
+        "name": "flybrain:groom",
+        "stream": false
+      }
+    ]
+  },
+  "takeoff": {
+    "subtitle": "subtitles.flybrain.takeoff",
+    "sounds": [
+      {
+        "name": "flybrain:takeoff",
+        "stream": false
+      }
+    ]
+  },
+  "air": {
+    "subtitle": "subtitles.flybrain.air",
+    "sounds": [
+      {
+        "name": "flybrain:air",
+        "stream": false
+      }
+    ]
+  },
+  "land": {
+    "subtitle": "subtitles.flybrain.land",
+    "sounds": [
+      {
+        "name": "flybrain:land",
+        "stream": false
+      }
+    ]
+  },
+  "strike": {
+    "subtitle": "subtitles.flybrain.strike",
+    "sounds": [
+      {
+        "name": "flybrain:strike",
+        "stream": false
+      }
+    ]
+  },
+  "feeding": {
+    "subtitle": "subtitles.flybrain.feeding",
+    "sounds": [
+      {
+        "name": "flybrain:feeding",
+        "stream": false
+      }
+    ]
+  },
+  "hurt": {
+    "subtitle": "subtitles.flybrain.hurt",
+    "sounds": [
+      {
+        "name": "flybrain:hurt",
+        "stream": false
+      }
+    ]
+  },
+  "death": {
+    "subtitle": "subtitles.flybrain.death",
+    "sounds": [
+      {
+        "name": "flybrain:death",
+        "stream": false
+      }
+    ]
+  },
+  "crawl": {
+    "subtitle": "subtitles.flybrain.crawl",
+    "sounds": [
+      {
+        "name": "flybrain:crawl",
+        "stream": false
+      }
+    ]
+  },
+  "scare": {
+    "subtitle": "subtitles.flybrain.scare",
+    "sounds": [
+      {
+        "name": "flybrain:scare",
+        "stream": false
+      }
+    ]
+  }
+}

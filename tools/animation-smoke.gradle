@@ -1,0 +1,25 @@
+sourceSets {
+    animationTest {
+        compileClasspath += sourceSets.client.compileClasspath + sourceSets.client.output + sourceSets.main.output
+        runtimeClasspath += sourceSets.client.runtimeClasspath
+    }
+}
+loom {
+    mods { animation_smoke { sourceSet sourceSets.animationTest } }
+    runs {
+        animationClient {
+            client()
+            source sourceSets.animationTest
+            runDir 'docs/game-animation/client'
+            programArgs '--quickPlayMultiplayer', '127.0.0.1:25576', '--username', 'AnimationQA', '--width', '1280', '--height', '720'
+        }
+        animationServer {
+            server()
+            runDir 'docs/game-animation/server'
+            programArg 'nogui'
+        }
+    }
+}
+tasks.named('compileAnimationTestJava') { dependsOn clientClasses }
+tasks.named('runAnimationClient') { dependsOn animationTestClasses }
+tasks.named('runAnimationServer') { standardInput = System.in }

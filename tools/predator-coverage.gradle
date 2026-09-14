@@ -1,0 +1,18 @@
+apply plugin: 'jacoco'
+jacoco { toolVersion = '0.8.12' }
+tasks.withType(JavaExec).configureEach {
+    jacoco.applyTo(it)
+    jacoco { includes = ['dev.flybrain.*'] }
+}
+tasks.register('predatorCoverage', JacocoReport) {
+    dependsOn 'test', 'brainCheck', 'predatorCheck', 'recoveryCheck', 'surfaceCheck', 'audioCheck', 'telemetryCheck', 'voiceCheck', 'voiceCacheCheck', 'voicePluginCheck', 'voiceConsentCheck'
+    executionData fileTree(layout.buildDirectory.dir('jacoco')) { include '*.exec' }
+    sourceDirectories.from(files('src/main/java','src/client/java'))
+    classDirectories.from(files(sourceSets.main.output.classesDirs, sourceSets.client.output.classesDirs).asFileTree.matching {
+        include 'dev/flybrain/behavior/**', 'dev/flybrain/movement/Predator*', 'dev/flybrain/scene/**',
+                'dev/flybrain/brain/ManagedBrainProcess*', 'dev/flybrain/brain/BrainLifecycle*',
+                'dev/flybrain/voice/**', 'dev/flybrain/audio/**', 'dev/flybrain/model/SurfaceFrame*',
+                'dev/flybrain/entity/CreatureEntity*', 'dev/flybrain/render/CreatureAudio*'
+    })
+    reports { xml.required = true; html.required = true }
+}
