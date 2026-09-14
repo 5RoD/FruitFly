@@ -16,7 +16,7 @@
   },
   "flybrain": {
     "filename": "flybrain-0.3.0.jar",
-    "sha512": "ef560487b1ccc32f7cfb25a4c97f0097c0d4ceada4c70c13672d29ea1ac831d13d1f26078b40d309c58db2b3e9bb563ec74be88001070e50e92d3f251d54f770",
+    "sha512": "f1fc2bdf572111ad89bcd02984350d0c187024736462c5de6f294b3d7c485e522586bbbe9f60ced63755157c3ace3b253a9590142a4df54440c4dc09896c0b05",
     "url": "https://github.com/5RoD/FruitFly/releases/download/v0.3.0/flybrain-0.3.0.jar"
   }
 }
